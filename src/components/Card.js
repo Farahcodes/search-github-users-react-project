@@ -13,7 +13,14 @@ const Card = () => {
           <h4>{name}</h4>
           <p>@{twitter_username || 'codingfarah'}</p>
         </div>
+        <a href={html_url}>follow</a>
       </header>
+      <p className='bio'>{bio || 'Front End Developer'} </p>
+      <div className='links'>
+        <p><MdBusiness/> {company || 'Open to work'}</p>
+        <p><MdLocationOn/> {location || 'Cannes, France'}</p>
+        <a href={`https://${blog}`}><MdLink/> {blog || 'www.farahcodes.com'}</a>
+      </div>
     </Wrapper>
   );
 };
